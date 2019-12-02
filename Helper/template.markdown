@@ -1,6 +1,6 @@
 # [LeetCode](https://leetcode.com) 的解答合集 {{- /* 本文件是用来生成 README.md 的模板 */}}
 
- [![Go](https://img.shields.io/badge/by-lee-blue)](https://github.com/ConserveLee/leetcode_solution)
+ [![Go](https://img.shields.io/badge/by-lee-important)](https://github.com/ConserveLee/leetcode_solution)
  [![Go](https://img.shields.io/badge/Go-1.13-blue.svg)](https://golang.google.cn)
 
 
