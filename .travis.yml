@@ -6,3 +6,6 @@ go:
 script:
   - cd Helper
   - go build .
+
+after_success:
+  - ./Hepler/push.sh
