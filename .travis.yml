@@ -3,9 +3,13 @@ language: go
 go:
   - master
 
+branches:
+  only:
+    - develop
+
 script:
   - cd Helper
   - go run .
 
 after_success:
-  - ./Hepler/push.sh
+  - ./push.sh
