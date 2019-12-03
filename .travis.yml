@@ -12,6 +12,7 @@ script:
   - go run .
 
 after_success:
+  - cd ..
   - git config --local user.name "${U_NAME}"
   - git config --local user.email "${U_EMAIL}"
   - git add .
