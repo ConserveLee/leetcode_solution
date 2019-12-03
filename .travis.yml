@@ -13,7 +13,7 @@ script:
 
 after_success:
   - cd ..
-  - git checkout gh
+  - git checkout -b gh
   - cat README.md
   - git config --local user.name "${U_NAME}"
   - git config --local user.email "${U_EMAIL}"
