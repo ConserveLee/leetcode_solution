@@ -16,6 +16,6 @@ after_success:
   - cat README.md
   - git config --local user.name "${U_NAME}"
   - git config --local user.email "${U_EMAIL}"
-  - git add README.md
+  - git add .
   - git commit -m ":construction_worker:- Build & Deploy by Travis CI"
   - git push --force "https://${Travis_Token}@${GIT_REF}" develop:master
