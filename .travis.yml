@@ -13,6 +13,7 @@ script:
 
 after_success:
   - cd ..
+  - pwd
   - git config --local user.name "${U_NAME}"
   - git config --local user.email "${U_EMAIL}"
   - git add .
