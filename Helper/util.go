@@ -19,7 +19,7 @@ type problem struct {
 
 func newSolution() problems {
 	const slPath = "../solution"
-	///** 从文件读取 */
+	/** 从文件读取 */
 	ps := getSl(slPath)
 
 	return ps
