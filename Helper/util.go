@@ -46,7 +46,7 @@ func (p problem) tableLine() string {
 	// 难度
 	res += fmt.Sprintf("|%s", p.diff())
 	// 语言 TODO 以后dir写在语言下，同题目同一行tableLine
-	res += fmt.Sprintf("|%s\n", p.lang())
+	res += fmt.Sprintf("|%s\n", p.Lang)
 
 	return res
 }
