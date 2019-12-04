@@ -18,5 +18,4 @@ after_success:
   - git config --local user.email "${U_EMAIL}"
   - git add .
   - git commit -m ":construction_worker:- Build & Deploy by Travis CI"
-  - git push "https://${Travis_Token}@${GIT_REF}" gh:develop
   - git push --force "https://${Travis_Token}@${GIT_REF}" gh:master
