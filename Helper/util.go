@@ -46,7 +46,7 @@ func (p problem) tableLine() string {
 	// 难度
 	res += fmt.Sprintf("|%s", p.diff())
 	// 语言 TODO 以后dir写在语言下，同题目同一行tableLine
-	res += fmt.Sprintf("|%s\n", p.Lang)
+	res += fmt.Sprintf("|%s\n", p.lang())
 
 	return res
 }
@@ -89,7 +89,7 @@ func getSl(dir string) problems {
 			pathArray := strings.Split(path, "/")
 			IDMix 	  := strings.Split(pathArray[len(pathArray)-2], "-")
 			titleMix  := strings.Split(info.Name(), ".")
-			id, title, lang := IDMix[0], titleMix[0], titleMix[1]
+			id, title, lang := IDMix[0], titleMix[0], lang(titleMix[1])
 			diff, _ := strconv.Atoi(IDMix[1])
 			ps = append(ps, problem{
 				ID:         id,
@@ -104,4 +104,13 @@ func getSl(dir string) problems {
 		return nil
 	}
 	return ps
+}
+
+func lang(lang string) string {
+	switch lang {
+	case "go":
+		return "Golang"
+	case "py":
+		return "Python"
+	}
 }
