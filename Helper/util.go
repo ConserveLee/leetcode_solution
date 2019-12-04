@@ -30,8 +30,8 @@ func (ps problems) PrintTable() string {
 }
 
 func (ps problems) table() string {
-	res := "|题号|题目|难度|\n"
-	res += "| ---- | ---- | ---- |\n"
+	res := "|题号|题目|难度|语言|\n"
+	res += "| ---- | ---- | ---- | ---- |\n"
 	for _, p := range ps {
 		res += p.tableLine()
 	}
