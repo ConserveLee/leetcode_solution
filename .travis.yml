@@ -1,7 +1,6 @@
 language: go
 
 go:
-  - master
   - stable
 
 branches:
@@ -9,6 +8,8 @@ branches:
     - develop
 
 script:
+  - go env | grep GOCACHE | cut -d "=" -f 2
+    "/home/travis/.cache/go-build"
   - cd Helper
   - go run .
 
