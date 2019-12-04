@@ -44,7 +44,9 @@ func (p problem) tableLine() string {
 	// 标题
 	res += fmt.Sprintf("|[%s](%s)", p.Title, p.dir())
 	// 难度
-	res += fmt.Sprintf("|%s|\n", p.diff())
+	res += fmt.Sprintf("|%s", p.diff())
+	// 语言 TODO 以后dir写在语言下，同题目同一行tableLine
+	res += fmt.Sprintf("|%s\n", p.Lang)
 
 	return res
 }
@@ -85,7 +87,7 @@ func getSl(dir string) problems {
 		// check if it is a regular file (not dir)
 		if info.Mode().IsRegular() {
 			pathArray := strings.Split(path, "/")
-			IDMix 	  := strings.Split(pathArray[len(pathArray) - 2], "-")
+			IDMix 	  := strings.Split(pathArray[len(pathArray)-2], "-")
 			titleMix  := strings.Split(info.Name(), ".")
 			id, title, lang := IDMix[0], titleMix[0], titleMix[1]
 			diff, _ := strconv.Atoi(IDMix[1])
