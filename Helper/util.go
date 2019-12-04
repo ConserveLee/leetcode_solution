@@ -113,4 +113,5 @@ func lang(lang string) string {
 	case "py":
 		return "Python"
 	}
+	return "unknown"
 }
