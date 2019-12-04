@@ -57,9 +57,9 @@ func (p problem) link() string {
 
 func (p problem) dir() string {
 	switch p.Lang {
-	case "go":
+	case "Golang":
 		return fmt.Sprintf("/%s/%s-%v/%s.go", "solution/go", p.ID, p.Difficulty, p.Title)
-	case "python":
+	case "Python":
 		return fmt.Sprintf("/%s/%s-%v/%s.go", "solution/python", p.ID, p.Difficulty, p.Title)
 	}
 	return "语言类型错误"
